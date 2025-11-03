@@ -1,0 +1,13 @@
+﻿@model IEnumerable<LTWeb11_Bai01.Models.NhaXuatBan>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<ul class="sidebar-menu">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("SachTheoNXB", "BookStore", new { id = item.MaNXB })">
+                <i class="fas fa-print"></i>
+                @item.TenNXB
+            </a>
+        </li>
+    }
+</ul>

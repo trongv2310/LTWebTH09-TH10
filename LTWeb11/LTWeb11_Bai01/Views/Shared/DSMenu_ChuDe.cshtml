@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<LTWeb11_Bai01.Models.ChuDe>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<ul class="sidebar-menu">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("XemTheoChuDe", "Home", new { id = item.MaChuDe })">
+                <i class="fas fa-tag"></i>
+                @item.TenChuDe
+            </a>
+        </li>
+    }
+</ul>

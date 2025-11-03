@@ -1,0 +1,51 @@
+﻿@model IEnumerable<LTWeb11_Bai01.Models.Sach>
+@{
+    ViewBag.Title = "Trang chủ";
+}
+
+
+@section Banner {
+    @Html.Partial("_Banner");
+}
+
+<!-- Nội dung chính -->
+<div class="row">
+    <div class="col-12">
+        <h2 class="mb-4">Sách mới nhất</h2>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+                <div class="card h-100 shadow-sm">
+                    <a href="@Url.Action("Details", "Home", new { id = item.MaSach })">
+                        <img src="@Url.Content("~/Content/images/" + item.AnhBia)"
+                             class="card-img-top"
+                             alt="@item.TenSach"
+                             style="height: 300px; object-fit: cover;">
+                    </a>
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="height: 3.5rem; overflow: hidden;">
+                            <a href="@Url.Action("Details", "Home", new { id = item.MaSach })"
+                               class="text-dark text-decoration-none"
+                               title="@item.TenSach">
+                                @item.TenSach
+                            </a>
+                        </h5>
+
+                        <p class="card-text text-danger fw-bold fs-5">
+                            @(item.GiaBan.HasValue ? String.Format("{0:N0} đ", item.GiaBan) : "Liên hệ")
+                        </p>
+
+                        <a href="#" class="btn btn-primary mt-auto">
+                            Thêm vào giỏ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

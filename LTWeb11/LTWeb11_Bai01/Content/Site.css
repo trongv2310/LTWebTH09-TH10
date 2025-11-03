@@ -1,0 +1,80 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* === THAY THẾ CSS CŨ CỦA BẠN BẰNG ĐOẠN NÀY === */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .sidebar-menu li {
+        /* Bỏ border-bottom, chúng ta sẽ thêm vào <a> */
+    }
+
+        .sidebar-menu li:last-child a {
+            /* Xóa border-bottom của item cuối */
+            border-bottom: none;
+        }
+
+    .sidebar-menu a {
+        display: flex; /* Dùng flexbox để căn icon và chữ */
+        align-items: center;
+        padding: 0.85rem 1.25rem; /* Tăng nhẹ padding */
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+        border-left: 4px solid transparent; /* Thêm 1 viền "tàng hình" bên trái */
+        border-bottom: 1px solid #f0f1f5; /* Thêm đường kẻ mờ */
+        font-weight: 500;
+    }
+
+        .sidebar-menu a:hover {
+            background-color: var(--accent-color); /* Dùng màu nền accent */
+            color: var(--primary-color);
+            border-left-color: var(--primary-color); /* HIỆN viền bên trái khi hover */
+            /* Bỏ padding-left: 1.5rem (để tránh giật) */
+        }
+
+        /* Thêm trạng thái "active" khi bạn đang ở trang đó */
+        .sidebar-menu a.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700; /* In đậm chữ */
+            border-left-color: var(--primary-color);
+        }
+
+        .sidebar-menu a i {
+            margin-right: 0.75rem; /* Tăng khoảng cách icon */
+            width: 1.2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #b0b3c2; /* Cho icon màu xám nhạt */
+            transition: color 0.25s ease;
+        }
+
+        /* Icon cũng đổi màu khi hover */
+        .sidebar-menu a:hover i,
+        .sidebar-menu a.active i {
+            color: var(--primary-color);
+        }
+
+/* === KẾT THÚC CSS NÂNG CẤP === */

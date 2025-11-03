@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTWeb11_Bai01", "LTWeb11_Bai01\LTWeb11_Bai01.csproj", "{B99CA7C4-596D-42C7-A01D-1E6F8D77FCBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B99CA7C4-596D-42C7-A01D-1E6F8D77FCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99CA7C4-596D-42C7-A01D-1E6F8D77FCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99CA7C4-596D-42C7-A01D-1E6F8D77FCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99CA7C4-596D-42C7-A01D-1E6F8D77FCBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
